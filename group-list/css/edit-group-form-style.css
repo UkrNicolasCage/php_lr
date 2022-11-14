@@ -1,0 +1,38 @@
+label {
+  display: block;
+  margin: 1rem 0 0.25rem 0;
+}
+
+input {
+  display: block;
+  width: 30%;
+  height: calc(2.25rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #bdbdbd;
+  border-radius: 0.25rem;
+  transition: all 0.1s ease-in;
+}
+
+.submit {
+  display: block;
+  background: #2fba2c;
+  width: 15%;
+}
+
+.submit:hover {
+  background-color: #57c755;
+  transform: scale(1.02);
+}
+.submit:active {
+  background-color: #1f9a1d;
+  transform: scale(0.95);
+  text-transform: uppercase;
+}
