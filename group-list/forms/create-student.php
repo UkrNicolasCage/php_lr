@@ -1,4 +1,8 @@
 <?php
+include(__DIR__ . '/../auth/check-auth.php');
+if (!CheckRight('student', 'create')) {
+  die('Ви не маєте права на виконання цієї інформації');
+}
 if ($_POST) {
   $nameTpl = '/^student-\d\d.txt\z/';
   $path = "/var/www/public/files/group-list/data/" . $_GET["group"];
