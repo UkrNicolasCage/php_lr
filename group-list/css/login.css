@@ -34,8 +34,5 @@ input {
 .submit:active {
   background-color: #1f9a1d;
   transform: scale(0.95);
-}
-
-.privilege label{
-  margin-left: 13%;
+  text-transform: uppercase;
 }
