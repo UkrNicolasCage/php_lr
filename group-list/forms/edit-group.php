@@ -1,4 +1,9 @@
 <?php
+include(__DIR__ . '/../auth/check-auth.php');
+if(!CheckRight('group', 'edit')){
+  die('Ви не маєте права на виконання цієї інформації');
+}
+
 if ($_POST) {
   $f = fopen("../data/". $_GET['group'] ."/group.txt", "w");
   $grArr = array($_POST['number'], $_POST['department'], $_POST['starosta'],);

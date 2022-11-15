@@ -22,6 +22,9 @@ require('/var/www/public/files/group-list/data/declare-groups.php');
   <header>
     <div class="user-info">
       <span>Hello <?php echo $_SESSION['user']; ?> !</span>
+      <?php if (CheckRight('user', 'admin')): ?>
+        <a href="admin/index.php">Адміністрування</a>
+        <?php endif;?>
       <a href="auth/logout.php">Logout</a>
     </div>
     <?php if (CheckRight('group', 'view')) : ?>

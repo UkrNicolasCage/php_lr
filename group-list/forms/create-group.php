@@ -1,4 +1,8 @@
 <?php
+include(__DIR__ . '/../auth/check-auth.php');
+if (!CheckRight('group', 'create')) {
+  die('Ви не маєте права на виконання цієї інформації');
+}
 $nameTpl = '/^group-\d\d\z/';
 $path = "/var/www/public/files/group-list/data/";
 $const = scandir($path);

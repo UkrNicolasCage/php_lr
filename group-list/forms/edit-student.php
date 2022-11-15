@@ -1,6 +1,10 @@
 <?php
+include(__DIR__ . '/../auth/check-auth.php');
+if (!CheckRight('student', 'edit')) {
+  die('Ви не маєте права на виконання цієї інформації');
+}
 if ($_POST) {
-  $f = fopen("/var/www/public/files/group-list/data/". $_GET['group']. "/" . $_GET['file'], "w");
+  $f = fopen("/var/www/public/files/group-list/data/" . $_GET['group'] . "/" . $_GET['file'], "w");
   $privilege = 0;
   if ($_POST['stud_privelege'] == 1) {
     $privilege = 1;
